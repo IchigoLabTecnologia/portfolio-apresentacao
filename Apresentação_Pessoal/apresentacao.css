@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-image: linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)
+   ), url("Background/galaxy-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Comic Neue", sans-serif; color: white;  
+}
+
+header{
+    padding: 20px 40px;
+    text-align: left;
+    border-bottom: 4px solid white;
+    max-width: 1100px;
+    width: 90%;
+    margin: auto;
+}
+
+.foto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 3px solid white;
+    padding: 8px;
+
+    background: transparent;
+}
+.perfil{
+    max-width: 1100px;
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.foto{
+    flex: 1;
+}
+
+.conteudo{
+    max-width: 1100px;
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+    padding: 20px 40px;
+    align-items: stretch;
+    border-bottom: 4px solid white;
+}
+
+.apresentacao{
+    flex: 2;
+}
+
+.apresentacao h2{
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.apresentacao h3{
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+
+
+.atributos{
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: nowrap;    
+}
+
+
+.main-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: nowrap;   
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.descricao,
+.cursos{
+    flex: 1;
+}
+
+.descricao,
+.cursos{
+    overflow-wrap: break-word;
+}
+
+.descricao, .cursos{
+    padding: 15px 20px;
+    line-height: 1.8;
+}
+
+.descricao,
+.cursos,
+.perfil-test,
+.tecnologias,
+.ferramentas,
+.idiomas{
+    background: rgba(40,40,40,0.75);
+    backdrop-filter: blur(6px);
+
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+
+    position: relative;
+}
+
+
+.descricao h4,
+.cursos h4,
+.perfil-test h4,
+.tecnologias h4,
+.ferramentas h4,
+.idiomas h4{
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(40,40,40,1);
+    padding: 0 12px;
+    font-size: 18px;
+}
+
+.descricao,
+.cursos,
+.perfil-test,
+.tecnologias,
+.ferramentas,
+.idiomas{
+    position: relative;
+    margin-top: 20px;
+}
+
+.skill{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill p{
+    font-size: 14px;
+}
+
+.level{
+    display: flex;
+    gap: 5px;
+}
+
+.level span{
+    width: 12px;
+    height: 24px;
+    background: black;
+    border: 2px solid white;
+}
+
+.level .ativo{
+    background: white;
+}
+
+
+.certificados{
+    max-width: 1100px;
+    margin: 60px auto;
+    text-align: center;
+    min-height: 420px;
+}
+
+.certificados h2{
+    margin-bottom: 30px;
+}
+
+
+.deck{
+    position: relative;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.deck .card{
+    position: absolute;
+    transition:all 0.4s ease;
+}
+
+.deck .card img{
+    height: 220px;
+    width: auto;
+    border: 3px solid white;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.deck .card:hover img{
+    transform: scale(1.05);
+}
+
+.deck .card.active{
+    transform: scale(1.2);
+    z-index: 3;
+}
+
+.deck .card.left{
+    transform: translateX(-280px) 
+    rotate(-10deg) scale(0.9);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.deck .card.right{
+    transform: translateX(280px) 
+    rotate(10deg) scale(0.9);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.deck .card.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.deck .card{
+    cursor: pointer;
+}
+
+button{
+    background: rgba(40,40,40,0.8);
+    border: 2px solid white;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+button:hover{
+    background: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+.controles-certificados{
+    max-width: 1100px;
+    width: 90%;
+    margin: 30px auto 0;
+
+    padding-top: 20px;
+    border-top: 4px solid white;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.rodape{
+    max-width: 1100px;
+    width: 90%;
+    margin: 60px auto;
+    padding-top: 20px;
+    border-top: 4px solid white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes{
+    display: flex;
+    gap: 20px;
+}
+
+.redes img{
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.redes img:hover{
+    transform: scale(1.2);
+}
+
+.curriculo a{
+    padding: 8px 16px;
+    border: 2px solid white;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.curriculo a:hover{
+    background: white;
+    color: black;
+}
